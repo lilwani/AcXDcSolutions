@@ -1,0 +1,52 @@
+<head>
+<link rel="stylesheet" href="styles/complaintPage.css">
+</head>
+	<form >
+		<table>
+				<tr>
+					<td><label>Select Appliance:</label></td>
+					<td>
+						<select ng-model="pSelected" ng-change="compList()">
+							<option ng-repeat="item in appls">{{item.product}}</option>
+						</select>
+					</td>
+					<td ng-if="pSelected=='Air Conditioner'">
+						<select ng-model="$parent.acType" ng-change="typeList()">
+							<option ng-repeat="item in acTypes">{{item}}</option>
+						</select>
+					</td>
+					<td ng-if="pSelected=='Other Appliances'">
+						<input type="text" ng-model="$parent.otherApp" style="width:100px;">
+					</td>
+				</tr>
+				
+				<tr>
+					<td><label>Select Brand:</label></td>
+					<td><select ng-model="cSel">
+							<option ng-repeat="item in selCompValue">{{item}}</option>
+						</select>
+					</td>
+					<td ng-if="cSel=='Others' || pSelected=='Other Appliances'">
+						<input type="text" ng-model="$parent.otherBrand" style="width:100px;">
+					</td>
+				</tr>
+				
+				<tr>
+					<td><label>Problem Description:</label></td>
+					<td>
+						<textarea rows="4" cols="20" ng-model="pDesc"></textarea>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><label>Visiting Charges:</label></td>
+					<td><input type="text" ng-model="vCharge" disabled></td>
+				</tr>
+				
+				<tr>
+					<td><label>{{otherApp}}...{{otherBrand}}</label></td>
+					<td><input type="button" value="OK" ng-click="subm()"></td>
+				</tr>
+				
+		</table>
+	</form>

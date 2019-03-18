@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;	
+}
+
+/* Style the header */
+header {
+  font-family:Bungee Shade;
+  background:linear-gradient(to bottom,#111111,#3a3737,#665c5c);
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  border-radius:20px;
+}
+
+/* Container for flexboxes */
+section {
+	font-family: Yrsa;
+	font-size:20px;
+  	display: -webkit-flex;
+  	display: flex;
+  	height:410px;
+  	text-align: center;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background:#777575;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 10px;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  padding: 10px;
+  border-radius: 20px;
+  background: #9b9b9b;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}

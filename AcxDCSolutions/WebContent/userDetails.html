@@ -1,0 +1,73 @@
+<head>
+<link rel="stylesheet" href="styles/userDetStyle.css">
+</head>
+    <div>
+      <form novalidate name="details" method="post">
+      <table>
+        <tr>
+          <td><label>FirstName:</label></td>
+          <td><input type="text" name="fname" placeholder="John" ng-model="fname" ng-blur="varFname=true" ng-pattern="/^[a-zA-Z]+$/" required></td>
+          <td ng-if=(varFname)>
+          <span id="err" ng-show="details.fname.$error.pattern">Incorrect Name</span>
+          <span id="err" ng-show="details.fname.$error.required">Please Enter Name</span>	
+          </td>
+        </tr>
+        <tr>
+          <td><label>LastName:</label></td>
+          <td><input type="text" name="lname" placeholder="Doe" ng-model="lname" ng-blur="varLname=true" ng-pattern="/^[a-zA-Z]+$/" required></td>
+          <td ng-if=(varLname)>
+          <span id="err" ng-show="details.lname.$error.pattern">Incorrect Name</span>
+          <span id="err" ng-show="details.lname.$error.required">Please Enter Name</span>	
+          </td>
+        </tr>
+        <tr>
+          <td><label>Contact:</label></td>
+          <td><input type="text" name="cnt" placeholder="9122990088" ng-model="cnt" ng-blur="varContact=true" maxlength="10"  ng-pattern="/^[0-9]+$/" required ></td>
+          <td ng-if="varContact">
+          <span id="err" ng-show="details.cnt.$error.pattern">Incorrect Contact</span>
+          <span id="err" ng-show="details.cnt.$error.required">Please Enter Contact Number</span>
+          </td>
+			        
+        </tr>
+        <tr>
+          <td><label>Alternate Contact:</label></td>
+          <td><input type="text" name="altcnt" placeholder="9144995688" ng-model="altcnt" maxlength="10"></td>
+        </tr>
+        <tr>
+          <td><label>Address:</label></td>
+          <td><textarea rows="4" cols="21" name="addr" ng-model="addr" ng-blur="varAddr=true" placeholder="Ganga heights, Wing-C; Flat no:105, Plot:147; Pune-411007" required="required"></textarea></td>
+          <td><span id="err" ng-show="details.addr.$dirty && details.addr.$invalid && varAddr">Please enter Address</span></td>
+        </tr>
+        <tr>
+          <td><label>Landmark:</label></td>
+          <td><input type="text" name="land" ng-model="land" ng-blur="varLand=true" placeholder="Opp German Bakery" required></td>
+          <td><span id="err" ng-show="details.land.$dirty && details.land.$invalid && varLand">Please enter Landmark</span></td>    
+        </tr>
+        <tr>
+          <td><label>Email:</label></td>
+          <td><input type="email" name="mail" ng-model="mail" ng-blur="varEmail=true" placeholder="ex@domain.com" ng-blur="varEmail=true" required></td>
+          <td><span id="err" ng-show="details.mail.$dirty && details.mail.$invalid && varEmail">Invalid Email</span></td> 
+        </tr>
+        <tr>
+        	<td><label>Username:</label></td>
+        	<td><input type="text" name="uname" ng-model="namecred" ng-blur="varUname=true" maxlength="10" required ></td>
+        	<td ng-if=(varUname)>
+          	<span id="err" ng-show="details.fname.$error.required">Please Enter Username</span>	
+          </td>
+        </tr>
+        <tr>
+        	<td><label>Password:</label></td>
+        	<td><input type="password" name="pass" ng-model="passcred" ng-blur="varPass=true" required ></td>
+        	<td ng-if=(varPass)>
+          	<span id="err" ng-show="details.fname.$error.required">Please Enter Password</span>	
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="Submit" ng-disabled="details.$invalid" ng-click="submit()"></td>
+        </tr>
+      </table>
+          
+      </form> 
+
+    </div>     

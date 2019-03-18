@@ -1,0 +1,143 @@
+
+.myFont{
+	font-family:Bungee Shade;
+	text-align: center;
+	margin:auto;
+	padding:40px;
+	font-size: 40px;
+	animation-name:transFont;
+	animation-duration:2s;
+	color:white;
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.nav{
+	position: fixed;
+	top:32%;
+	width: 220px;
+	height:300px;
+	margin:auto;
+	padding-left:25px;
+	padding-top:25px;
+	margin-top:-10px;
+	margin-left:60px;
+	background-color:rgba(69, 125, 216,0.3);
+	border-radius:13px;
+}
+
+.content{
+	top:30%;
+	margin:auto;
+	width:700px;
+	height:450px;
+	background-color:rgba(69, 125, 216,0.3);
+	border-radius:13px;
+	overflow: auto;
+	display: block;
+}
+
+.headContent{
+	overflow:hidden;
+	margin-top:20px;
+	margin:auto;
+	width:700px;
+	height:150px;
+	background-color:rgba(69, 125, 216,0.3);
+	border-radius:13px;
+	overflow: auto;
+}
+
+a{
+	text-decoration:none;
+	font-family: 'Galdeano';
+	font-size: 20px; 
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgb(110, 139, 234);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+@keyframes transFont{
+	60%{color:rgb(48, 98, 181);}
+	50%{color:white;}
+	45%{text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;}
+	30%{color:rgb(48, 98, 181);}
+	20%{color:white;}
+	18%{text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;}
+	
+}
+
+input[type=text]
+{
+	height:22px;
+	border-radius: 5px;
+}
+
+input[type=textarea]
+{
+	height:18px;
+	border-radius: 5px;
+	width:20px;
+}
+
+label
+{
+	font-family: 'Galdeano';
+	font-size: 20px;
+	color:white;
+	padding:20px;
+}
+
+select
+{
+	border-radius: 5px;
+	height:22px;
+	font-size:15px;
+	cursor: pointer;
+}
+
+.title
+{
+	postion:fixed;
+}
+
+.logout
+{
+
+	color:red;
+}

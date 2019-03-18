@@ -1,0 +1,46 @@
+{
+  "ecmaVersion": 5,
+  "plugins": {
+    "guess-types": {
+      
+    },
+    "outline": {
+      
+    },
+    "jasmine": {
+      
+    },
+    "node": {
+      
+    },
+    "angular1": {
+      
+    },
+    "cordovajs": {
+      
+    },
+    "browser-extension": {
+      
+    },
+    "node-extension": {
+      
+    },
+    "protractor": {
+      
+    },
+    "jquery-ui1-12": {
+      
+    },
+    "jquery-extension": {
+      
+    },
+    "jquery-mobile1.5": {
+      
+    }
+  },
+  "libs": [
+    "browser",
+    "webidl",
+    "jquery"
+  ]
+}

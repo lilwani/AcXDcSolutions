@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html ng-app="mainModule">
+<head >
+
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-route.min.js"></script>
+<script src="js/indexRoutes.js"></script>
+<script src="js/appliances.js"></script>
+<script src="js/userDetails.js"></script>
+
+<link href="styles/demostyle.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Bungee Shade" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Galdeano" rel='stylesheet'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<base href="http://localhost:8080/AcxDCSolutions/index2.html">
+
+<title>Services</title>
+<link rel="icon" type="image/png" href="img/Wrench.ico">
+
+</head>
+
+<body background="img/BACKGROUND-1.jpg">
+	<br>
+	<div class="myFont headContent">
+	<span class=" fas fa-cog fa-pulse"></span>
+	<span class="title">AC x DC Solutions</span>
+	<!-- <a href="#/Login" class="logout">Log Out</a> -->
+	</div>
+	
+	<br>
+	
+	<div class="nav"> 
+		
+		<a href="#/"><button class="button" id="home" ><span>About Us</span></button></a><br>
+		<a href="#/Login"><button class="button" id="login" ><span>Login</span></button></a><br>
+		<a href="#/User"><button class="button" id="user" ><span>Sign Up</span></button></a><br>
+		<a href="#/Services"><button class="button" id="services"><span>Service</span></button></a><br>
+		
+	</div>
+		
+	<div class="content" ng-view></div>
+</body>
+
+</html>

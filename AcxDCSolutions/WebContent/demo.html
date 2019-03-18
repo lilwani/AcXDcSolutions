@@ -1,0 +1,39 @@
+<head>
+	<link rel='stylesheet' href="styles/login.css">
+</head>
+<body>
+<div class="wrapperdiv">
+<br>
+<div class="icondiv">
+	<img src="./img/UserIcon.png">
+</div>
+<br>
+<div >
+ 
+	<form name='logDet' >
+		
+		<table class="logindiv">
+			
+			<tr>
+				<td><label>Username:</label></td>
+				<td><input type='text' name='uname' ng-model="$root.username"></td>
+			</tr>
+			
+			<tr>
+				<td><label>Password:</label></td>
+				<td><input type='password' name='pwd' ng-model="$root.password"></td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td><input type='button' name='submit' value='Login' ng-click="submit()"></td>
+			</tr>
+				
+		</table>
+		{{txt}}<br>
+		{{username}}<br>
+		{{password}}
+	</form>
+</div>
+</div>
+</body>
